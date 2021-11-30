@@ -1,0 +1,21 @@
+.container {
+    width: 1400px;
+    margin: 0 auto;
+  }
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__item {
+    margin-right: 26px;
+}
+
+.header {
+    font-size: 30px;
+}
+.nav-item {
+    font-size: 19px;
+}

@@ -1,0 +1,59 @@
+/* svg {
+    width: 96px;
+    display: block;
+    margin: 0 auto;
+} */
+img {
+    width: 119px;
+}
+span {
+    font-weight: bold;
+}
+.container {
+    width: 780px;
+    margin: 0 auto;
+}
+.full {
+    display: flex;
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 23px;
+}
+.item__header {
+    font-size: 30px;
+    text-align: center;
+}
+.item__info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.item__info-dop {
+    padding-top: 31px;
+    padding-bottom: 31px;
+    font-size: 25px;
+}
+.origin {
+    width: 120px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.price {
+    width: 300px;
+    height: 45px;
+    margin: 20px auto;
+    padding-left: 35px;
+    padding-top: 5px;
+    color: white;
+    background-color: rgb(63, 81, 181);
+    
+}
+#arrowhead1, #arrowhead2 {
+    stroke: transparent;
+    fill: rgb(63, 81, 181);
+}

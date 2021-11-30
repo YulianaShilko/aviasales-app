@@ -1,0 +1,8 @@
+<ng-container *ngIf="flies else loading">
+    <fly *ngFor="let fly of flies" [fly]="fly" (ticketAdded)="addTicketToCart($event)"
+        (infoInServiceAdded)="addInfoInService($event)"></fly>
+</ng-container>
+
+<ng-template #loading>
+    <div>Загрузка данных...</div>
+</ng-template>

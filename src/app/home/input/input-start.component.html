@@ -1,0 +1,24 @@
+<h1 [ngClass]="{start__header:true}">Поиск дешевых авиабилетов</h1>
+<form [formGroup]="myForm" novalidate (ngSubmit)="submit($event)" class="start__forma">
+    <div class="form-group">
+        <label>Откуда</label>
+        <input class="form-control" name="name" formControlName="dispatchName" />
+    </div>
+    <div class="form-group">
+        <label>Куда</label>
+        <input class="form-control" name="email" formControlName="destinationName" />
+    </div>
+    <div class="form-group">
+        <label>Вылет</label>
+        <input class="form-control" type="date" name="dataFrom" formControlName="dataFrom" />
+    </div>
+    <div class="form-group">
+        <label>Обратно</label>
+        <input class="form-control" type="date" name="dataAt" formControlName="dataAt" />
+    </div>
+    <div [ngStyle]="{'margin-top':'30px'}">
+        <button (click)="addNewItem(this.myForm)" class="form-group_button">
+            Найти
+        </button>
+    </div>
+</form>

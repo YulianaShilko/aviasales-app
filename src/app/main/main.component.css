@@ -1,0 +1,31 @@
+.main__header {
+    display: flex;
+}
+.about {
+    padding: 26px;
+}
+.about__text {
+    text-align: justify;
+    font-size: 18px;
+}
+.main__attention {
+    display: block;
+    margin-top: 29px;
+    font-size: 29px;
+    font-style: italic;
+}
+.pay-forms {
+    margin-top: 22px;
+}
+.pay-forms__text {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.main__line {
+    color: rgb(63, 81, 181);
+}
+
+.main__img {
+    border: 1px solid black;
+}

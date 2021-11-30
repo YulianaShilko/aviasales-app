@@ -1,0 +1,7 @@
+<div class="home__header"></div>
+<div class="container">
+    <input-start (newItemEvent)="addItem($event)"></input-start>   
+</div>
+<div class="container">
+    <avia-list [flies]="aviaList" (ticketAdded)="addTicketToCart($event)"></avia-list>  
+</div>

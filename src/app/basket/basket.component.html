@@ -1,0 +1,48 @@
+<div class="basket">
+    <div class = "container">
+        <section class="order">
+            <h1 class="basket__header">Заказы</h1>
+            <item-basket *ngFor="let localStoragevalue of localStoragevalues" [localStoragevalue]="localStoragevalue"   (fromBasketDeleted)="deleteFromBasket($event)" ></item-basket>
+        </section>
+        <section class = "basket__theWayPay theWayPay">
+            <p class = "theWayPay__header">Способ оплаты</p>
+            <form name="theWayPay__form-pay">
+                <input id="byCard11" type="radio" name="theWayPayment" value="byCard" class= "form-pay__input-online">
+                <label for="byCard11" id="btnByCard" class= "form-pay__label-online">КАРТОЙ</label>
+                <input id="cash11" type="radio" name="theWayPayment" checked = "checked" value="cash" class= "form-pay__input-cash">
+                <label for="cash11" id="btnCash" class= "form-pay__label-cash">На месте</label>
+            </form>
+        </section>
+        <section class = "basket__yourData yourData">
+            <p class = "basket__header">Ваши данные</p>
+            <div class = "yourData__reg-info">
+                <span class = "yourData__info">Для заказа товаров требуется регистрация. Если вы уже зарегистрированы, войдите в свою учетную запись</span>
+                <button id="enter2" class = "yourData__enter-button">войти</button>
+            </div>
+            <div class="basket__totalnames">
+                <form>
+                    <div class="basket__names">
+                        <div class = "nameUser">
+                            <label for="nameOfUser" class = "nameUser__header">Имя:</label> <br>
+                            <input type="text" id="nameOfUser" name="nameOfUser" class = "nameUser__input">
+                        </div>
+                        <div class = "secondnameUser">
+                            <label for="secondNameOfUser" class = "secondnameUser__header">Фамилия:</label> <br>   
+                            <input type="text" id="secondNameOfUser" name="secondNameOfUser" class = "secondnameUser__input">
+                        </div>
+                    </div>
+                    <div class="basket__contacts">
+                        <div class = "telephone">
+                            <label for="telephoneOfUser" class = "telephone__label">Контактный телефон:</label> <br>
+                            <input type="text" id="telephoneOfUser" name="telephoneOfUser" class = "telephone__input">
+                        </div>
+                        <div class = "email">
+                            <label for="emailOfUser" class = "email__label">Электронная почта:</label> <br>   
+                            <input type="text" id="emailOfUser" name="emailOfUser" class = "email__input">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<table class="table avia-list-table">
+    <thead class="avia-list-table__header">
+        <tr>
+            <th class="avia-list-table__cell">Место отправления</th>
+            <th class="avia-list-table__cell">Место прибытия</th>
+            <th class="avia-list-table__cell">Дата вылета</th>
+            <th class="avia-list-table__cell">Дата прибытия</th>
+            <th class="avia-list-table__cell">Цена</th>
+        </tr>
+    </thead>
+    <tbody class="avia-list-table__body">
+        <tr>
+            <td class="avia-list-table__cell">{{localStoragevalue.origin}}</td>
+            <td class="avia-list-table__cell">{{localStoragevalue.destination}}</td>
+            <td class="avia-list-table__cell">{{localStoragevalue.departure_at}}</td>
+            <td class="avia-list-table__cell">{{localStoragevalue.return_at}}</td>
+            <td class="avia-list-table__cell">{{localStoragevalue.price}} USD </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <div class="fly-check__quantity">
+                    <div class="fly-check__quantity-value"> <span>{{quantatyCheckedFly}} </span> штук </div> 
+                    <add-quantity-ticket-comp (onChanged)="change($event)"></add-quantity-ticket-comp>
+                    <div class="fly-check__price"> Итоговая цена: <span>{{changedPrice}} USD </span></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <button type="button" (click)="deleteFromBasket(localStoragevalue)" class="avia-list-table__button-info">
+                Удалить из корзины </button>
+            </td>
+        </tr>
+    </tbody>
+</table> 

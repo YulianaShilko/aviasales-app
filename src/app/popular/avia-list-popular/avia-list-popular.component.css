@@ -1,0 +1,10 @@
+:host {
+    display: block;
+    padding-right: 70px;
+    padding-left: 70px;
+    font-size: 14px;
+}
+
+.avia-list__header {
+    display: block;
+}

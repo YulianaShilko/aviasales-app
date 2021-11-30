@@ -1,0 +1,24 @@
+{
+  "/aviasales/v3/*": {
+    "target": "https://api.travelpayouts.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "headers": {"X-Access-Token": "a3cddf5edf865d1231497bdbc3dbcdc7"},
+    "pathRewrite": {
+      "^aviasales/v3": ""
+    }
+  },
+
+  "/v1/*": {
+    "target": "https://api.travelpayouts.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "headers": {"X-Access-Token": "a3cddf5edf865d1231497bdbc3dbcdc7"},
+    "pathRewrite": {
+      "^v1": ""
+    }
+  }
+
+}

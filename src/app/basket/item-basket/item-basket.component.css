@@ -1,0 +1,37 @@
+:host {
+    display: block;
+    margin-top: 28px;
+}
+.avia-list-table {
+    width: 100%;
+    font-size: 13px;
+}
+.avia-list-table__header {
+    background: darkgray;
+}
+.avia-list-table__cell {
+    text-align: center;
+}
+.avia-list-table__body {
+    border: 2px solid darkgray;
+} 
+.avia-list-table__button {
+    color: white;
+        background-color: rgb(63, 81, 181);
+        border: none;
+}
+.avia-list-table__button-info {
+    display: block;
+    width: 134px;
+    height: 50px;
+    margin: 0 auto;
+}
+.fly-check__quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 21px;
+}
+span {
+    font-weight: bold;
+}

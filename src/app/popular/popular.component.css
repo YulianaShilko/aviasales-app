@@ -1,0 +1,23 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu__item {
+    margin-right: 26px;
+}
+
+.popular__header {
+    align-items: flex-start;
+    flex-direction: column;
+}
+.main__img {
+    height: 580px;
+    background-image: url(https://img5.goodfon.ru/original/1366x768/3/a7/embraer-erj-195-v-polete-inversionnyi-sled-belavia-embraer.jpg?d=1);
+    background-size: cover;
+}

@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="item__header"> Рейс {{valueInfoFromLS.origin}} - {{valueInfoFromLS.destination}}, {{valueInfoFromLS.departure_at.substr(0, 10)}}</div>
+    
+    <div class="item__info">
+        <div class="item__info-dop">
+            <div> IATA-код авиакомпании: <span>{{valueInfoFromLS.airline}} </span></div>
+            <div> Номер рейса: <span> {{valueInfoFromLS.flight_number}} </span></div>
+        </div>
+        <to-basket (ticketToBasketAdded)="addToBasket($event)"></to-basket>
+    </div>
+
+    <div class="full">
+        <div>
+            <img class="main__img" src="assets/img/pr.png" />
+        </div>
+        <div class="origin">
+            <div> {{valueInfoFromLS.origin}} </div>
+            <div> {{valueInfoFromLS.origin_airport}} </div>
+            <div> {{valueInfoFromLS.departure_at.substr(0, 10)}} </div>
+            <div> {{valueInfoFromLS.departure_at.substr(11, 8)}} </div>
+        </div>
+        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 100" width="350" height="100">
+            <defs>
+            <marker id="arrowhead1" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7"/>
+            </marker>
+            </defs>
+            <line x1="0" y1="50" x2="250" y2="50" stroke="rgb(63, 81, 181)" stroke-width="8" marker-end="url(#arrowhead1)" />
+        </svg>
+        <div class="origin">
+            <div> {{valueInfoFromLS.destination}} </div>
+        </div>             
+    </div>
+    <div class="full">
+        <div>
+            <img class="main__img" src="assets/img/pr-back.png" />  </div>
+        <div class="origin">
+            <div> {{valueInfoFromLS.destination}} </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 100" width="350" height="100">
+            <defs>
+            <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7"  />
+            </marker>
+            </defs>
+            <line x1="0" y1="50" x2="250" y2="50" stroke="rgb(63, 81, 181)" stroke-width="8" marker-end="url(#arrowhead2)" />
+        </svg>
+        <div class="origin">
+            <div> {{valueInfoFromLS.origin}} </div>
+            <div> {{valueInfoFromLS.destination_airport}} </div>
+            <div> {{valueInfoFromLS.return_at.substr(0, 10)}} </div>
+            <div> {{valueInfoFromLS.return_at.substr(11, 8)}} </div>
+        </div>
+    </div>
+    <div class="item__info-dop">
+        <div> Количество пересадок на пути «обратно»: <span> {{valueInfoFromLS.return_transfers}} </span> </div>
+        <div> Продолжительность рейсов: <span>{{valueInfoFromLS.duration}} минут </span> </div>
+        <div class="price"> Цена билетов: <span> {{valueInfoFromLS.price}} $ </span></div>
+    </div>
+</div>

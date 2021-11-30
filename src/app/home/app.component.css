@@ -1,0 +1,19 @@
+.container {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu__item {
+    margin-right: 26px;
+}
+
+.home__header {
+    height: 300px;
+    background-image: url(https://www.aeroflot.ru/media/aflfiles/media/rules_online/online_rules-head.jpg);
+    background-size: cover;
+}

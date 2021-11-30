@@ -1,0 +1,162 @@
+.container {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+.basket__header {
+    font-size: 35px;
+}
+
+.theWayPay__header {
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 32px;
+}
+
+.theWayPay__form-pay {
+    padding-top: 27px;
+}
+
+.form-pay__input-online,
+.form-pay__input-cash {
+    display: none;
+}
+
+.form-pay__label-online,
+.form-pay__label-cash {
+    margin-right: 19px;
+    background: #F7F7FA;
+    border-radius: 8px;
+    font-weight: 500;
+    line-height: 19px;
+    border: none;
+    width: 330px;
+    height: 51px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 16px;
+    cursor: pointer;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.yourData__reg-info {
+    padding-top: 21px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.yourData__info {
+    display: block;
+    width: 488px;
+    height: 38px;
+    line-height: 19px;
+    opacity: 0.5;
+    color: black;
+}
+
+.yourData__enter-button {
+    text-transform: uppercase;
+    margin: 0px 10px;
+    border: none;
+    width: 93px;
+    font-weight: bold;
+    height: 35px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(63, 81, 181);
+}
+
+.basket__names {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 24px;
+}
+
+.nameUser__header {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.nameUser__input {
+    width: 330px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    opacity: .5;
+}
+
+.secondnameUser {
+    margin-left: 20px;
+}
+
+.secondnameUser__header {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.secondnameUser__input {
+    width: 330px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    opacity: .5;
+}
+
+.basket__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 24px;
+}
+
+.telephone__label {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.telephone__input {
+    width: 330px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    opacity: .5;
+}
+
+.email {
+    margin-left: 20px;
+}
+
+.email__label {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.email__input {
+    width: 330px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    opacity: .5;
+}
