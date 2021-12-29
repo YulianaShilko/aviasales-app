@@ -160,3 +160,84 @@
 
     opacity: .5;
 }
+
+.basket__total {
+    width: 260px;
+    height: 315px;
+    margin-left: 15px;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin-top: 70px; 
+} 
+
+.basket__wrapper {
+    display: flex;
+}
+
+.total__price {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 24px; }
+.total__payment {
+    margin-left: 22px;
+    font-size: 22px;
+    color: darkslategrey;
+}
+    .goodsQuantityItogo {
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin: 10px 24px; 
+    }
+
+
+        .basket__button {
+            display: block;
+            width: 184px;
+            height: 51px;
+            background: #FB000F;
+            opacity: 0.8;
+            font-weight: bold;
+            border-radius: 8px;
+            margin: 0px auto;
+            border: none;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: #FFFFFF; 
+        }
+
+        .agreementRules {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            margin: 19px 0px; 
+            padding: 13px;
+            text-align: center;
+        }
+
+        .agreementRules label {
+            width: 241px;
+            height: 48px;
+            line-height: 16px;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.5);
+        } 

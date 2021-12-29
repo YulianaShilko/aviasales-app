@@ -15,6 +15,9 @@
 .avia-list-table__body {
     border: 2px solid darkgray;
 } 
+.avia-list-table__info {
+    font-size: 15px;
+}
 .avia-list-table__button {
     color: white;
         background-color: rgb(63, 81, 181);
@@ -22,9 +25,12 @@
 }
 .avia-list-table__button-info {
     display: block;
-    width: 134px;
+    width: 194px;
     height: 50px;
     margin: 0 auto;
+    border: none;
+    border-radius: 11px;
+    font-size: 17px;
 }
 .fly-check__quantity {
     display: flex;

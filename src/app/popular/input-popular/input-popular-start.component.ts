@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
-import { FormGroup, FormControl} from '@angular/forms';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'input-popular-start',
@@ -9,6 +9,10 @@ import { FormGroup, FormControl} from '@angular/forms';
                   <div class="form-group">
                         <label>Откуда</label>
                         <input class="form-control" name="name" formControlName="dispatchName" />
+                        <div class="alert alert-danger"
+                            *ngIf="myForm.controls['dispatchName'].invalid && myForm.controls['dispatchName'].touched">
+                                Пустое поле
+                        </div>
                     </div>
                     <div  [ngStyle]="{'margin-top':'30px'}">
                         <button (click)="addNewItem(this.myForm)" class= "form-group_button">
@@ -25,7 +29,7 @@ export class InputPopularStartComponent  {
 
   constructor(){
     this.myForm = new FormGroup({
-        "dispatchName": new FormControl("Москва")
+        "dispatchName": new FormControl("Москва", [Validators.required])
     });
   }
   

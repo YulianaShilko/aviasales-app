@@ -3,5 +3,6 @@
     <input-start (newItemEvent)="addItem($event)"></input-start>   
 </div>
 <div class="container">
-    <avia-list [flies]="aviaList" (ticketAdded)="addTicketToCart($event)"></avia-list>  
+    <div class="loading" *ngIf="isLoading">  </div>
+    <avia-list-popular [fliesPopular]="aviaList" (ticketAdded)="addTicketToCart($event)"></avia-list-popular>  
 </div>

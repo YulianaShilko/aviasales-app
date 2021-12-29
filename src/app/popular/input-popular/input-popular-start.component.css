@@ -5,10 +5,11 @@
 }
 
 .start__header {
-    margin-bottom: 232px;
+    padding-top: 53px;
+    margin-bottom: 314px;
     text-align: center;
     font-size: 30px;
-    color: aliceblue;
+    color: white;
 }
 
 .start__forma {
@@ -26,6 +27,9 @@
 
 .form-group_below {
     margin-top: 30px;
+}
+.form-control {
+    font-size: 14px;
 }
 
 .form-group_button {

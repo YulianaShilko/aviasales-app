@@ -6,12 +6,10 @@ export class LocalStorageService {
 
 	private cache: ICache;
 	private keyPrefix: string;
-	/* private valueQuantity: number; */
 
 	constructor() {
 		this.cache = Object.create(null);
 		this.keyPrefix = "TicketsIntoBasket"; 
-		/* this.valueQuantity = 0; */
 		window.addEventListener( "storage", this.handleStorageEvent);
 	}
 

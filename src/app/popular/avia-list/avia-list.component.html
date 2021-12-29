@@ -1,0 +1,71 @@
+
+<div class="form-group">
+    <div class="labelFilter">Поиск по месту прибытия</div>
+    <input type="text" [(ngModel)]="searchText" 
+           class="form-control" placeholder="Поиск" />
+
+    <div class="labelFilter">Фильтр по стоимости</div>
+        <input type="checkbox" name="f[]" value="movie number 1" [(ngModel)]="checkFirst"  /> 0 - 200$
+        <div>
+            <input type="checkbox"  name="f[]" value="movie number 2" [(ngModel)]="checkSecond"  /> 201 - 1000$
+        </div>
+</div>
+
+<!--  <fly *ngFor="let fly of flies | category : searchText" 
+      [fly]="fly" 
+      (ticketAdded)="addTicketToCart($event)"
+      (infoInServiceAdded)="addInfoInService($event)">
+</fly>  -->
+
+<table class="table avia-list-table">
+  <thead class="avia-list-table__header">
+      <tr>
+          <th class="avia-list-table__cell">Место отправления</th>
+          <th class="avia-list-table__cell">Место прибытия</th>
+          <th class="avia-list-table__cell">Дата вылета</th>
+          <th class="avia-list-table__cell">Дата прибытия</th>
+          <th class="avia-list-table__cell">Цена</th>
+      </tr>
+  </thead>
+  <tbody class="avia-list-table__body" 
+        *ngFor="let fly of flies | category : searchText | price :  checkFirst |
+         pricecopy :  checkSecond">
+      <tr class="avia-list-table__info">
+          <td class="avia-list-table__cell">{{fly.origin}}</td>
+          <td class="avia-list-table__cell">{{fly.destination}}</td>
+          <td class="avia-list-table__cell">
+              <p>{{fly.departure_at.substr(0, 10)}}</p>
+              <p>{{fly.departure_at.substr(11, 5)}}</p>
+          </td>
+          <td class="avia-list-table__cell">
+              <p>{{fly.return_at.substr(0, 10)}}</p>
+              <p>{{fly.return_at.substr(11, 5)}}</p>
+          </td>
+          <td class="avia-list-table__cell"><p>{{fly.price | currency}} </p>
+          </td>
+      </tr>
+      <tr>
+          <td colspan="5">
+              <button (click)="addTicketToCart(fly)" type="button" class="avia-list-table__button">в корзину</button>
+          </td>
+      </tr>
+      <tr>
+          <td colspan="5">
+              <a [routerLink]="['/item', 
+              {
+                'origin': newOrigin, 
+                'destination': newDestination,
+                              'departure_at': fly.departure_at,
+                              'return_at': fly.return_at,
+                              'price': fly.price 
+                            }]" target="_blank">
+              <button type="button"  
+                      (click)="addInfoInService(fly)" 
+                      class="avia-list-table__button-info" >
+                  полная информация
+              </button>
+            </a>
+          </td>
+      </tr>
+  </tbody>
+</table> 

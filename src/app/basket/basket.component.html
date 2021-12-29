@@ -1,10 +1,31 @@
 <div class="basket">
     <div class = "container">
-        <section class="order">
-            <h1 class="basket__header">Заказы</h1>
-            <item-basket *ngFor="let localStoragevalue of localStoragevalues" [localStoragevalue]="localStoragevalue"   (fromBasketDeleted)="deleteFromBasket($event)" ></item-basket>
-        </section>
-        <section class = "basket__theWayPay theWayPay">
+        <div class="basket__wrapper">
+            <section class="basket__order">
+                <h1 class="basket__header">Заказы</h1>
+                <item-basket *ngFor="let localStoragevalue of localStoragevalues" 
+                                [localStoragevalue]="localStoragevalue" 
+                                (fromBasketDeleted)="deleteFromBasket($event)" >
+                </item-basket>
+            </section>
+            <section class = "basket__total total">
+                        <div class="total__price">
+                            <p>Итого:</p> <p>{{totalPrice | currency}}</p>
+                        </div>
+                        <div class="goodsQuantityItogo">
+                            <p>Билеты, {{renderQuantity}} шт.</p> <p>{{totalPrice | currency}}</p>
+                        </div>
+                        <div class="total__payment">
+                            {{totalWayPayment }}
+                        </div>
+                        <button class="basket__button" (click)="chooseWayPayment() ">приобрести</button>
+                        <div class="agreementRules">
+                            <input id="SMS-checked" type="checkbox" name="comment" checked>
+                            <label for="SMS-checked">Согласен с условиями Правил пользования торговой площадкой и правилами возврата </label>
+                        </div>
+            </section>
+         </div>
+        <!-- <section class = "basket__theWayPay theWayPay">
             <p class = "theWayPay__header">Способ оплаты</p>
             <form name="theWayPay__form-pay">
                 <input id="byCard11" type="radio" name="theWayPayment" value="byCard" class= "form-pay__input-online">
@@ -12,7 +33,7 @@
                 <input id="cash11" type="radio" name="theWayPayment" checked = "checked" value="cash" class= "form-pay__input-cash">
                 <label for="cash11" id="btnCash" class= "form-pay__label-cash">На месте</label>
             </form>
-        </section>
+        </section> -->
         <section class = "basket__yourData yourData">
             <p class = "basket__header">Ваши данные</p>
             <div class = "yourData__reg-info">
@@ -46,3 +67,4 @@
         </section>
     </div>
 </div>
+

@@ -3,6 +3,8 @@ import { Component, OnInit,  Output, EventEmitter, OnDestroy} from '@angular/cor
 import { Router } from '@angular/router';
 import { TicketService } from "../addedTickets.service";
 import { ITicket } from "../addedTickets.service";
+import { HttpClient } from '@angular/common/http';
+import { firstValueFrom, Subscription } from "rxjs";
 
 interface Ticket {
     origin: string;
@@ -37,26 +39,50 @@ export class ItemComponent implements OnInit, OnDestroy {
     routerReturn_at: string ;
     valueInfoFromLS: Ticket;
     localKey: string;
+    recoodingValue;
     @Output() ticketToBasketAdded = new EventEmitter();
     imageSrc: string =   './download-removebg-preview.png';
 
-    constructor(private router:Router, ticketService: TicketService) {
+    constructor(private http: HttpClient, private router:Router, ticketService: TicketService) {
         this.ticketService = ticketService;
 		this.tickets = [];
 		this.value = "";
     }
 
-    ngOnInit() {
+    async ngOnInit() {
+        await this.getValueFromJson();
+
         this.routerOrigin  = this.router.url.substring(13,16);
         this.routerestination =this.router.url.substring(29,32);
         this.routerDeparture_at =this.router.url.substring(46,65);
         this.routerReturn_at =this.router.url.substring(84,103); 
         this.keyFromURL = this.routerOrigin + this.routerestination + this.routerDeparture_at;
+        console.log(this.router.url)
+
         for (let i=0; i < Object.keys(localStorage).length; i++) {
+            console.log(Object.keys(localStorage)[i])
             if (this.keyFromURL === Object.keys(localStorage)[i]) {
                 this.valueInfoFromLS = JSON.parse(Object.values(localStorage)[i])
             } 
         } 
+
+        for (let i = 0; i < this.recoodingValue.length; i++) {
+                if (this.recoodingValue[i].code === this.valueInfoFromLS.destination) {
+                    this.valueInfoFromLS.destination = this.recoodingValue[i].name;
+                    console.log(this.valueInfoFromLS.origin)
+                } 
+                if (this.recoodingValue[i].code === this.valueInfoFromLS.origin) {
+                    this.valueInfoFromLS.origin = this.recoodingValue[i].name;
+                    console.log(this.valueInfoFromLS.origin)
+                } 
+        }  
+    }
+
+
+    public async getValueFromJson() {
+        const assetTypes = this.http.get("assets/recooding.json");
+        this.recoodingValue = await firstValueFrom(assetTypes);
+        return this.recoodingValue;
     }
 
     ngOnDestroy() {

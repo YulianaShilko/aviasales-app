@@ -19,6 +19,7 @@ export class TicketService {
 		this.localStorageService = localStorageService;
 	}
 
+
 	public createTicket(id: string, name: string) : Observable<string> {
 		let tickets = this.loadTickets();
 		let ticket = {
@@ -30,6 +31,8 @@ export class TicketService {
 		this.localStorageService.setItem("tickets", tickets.concat(ticket));
 		return (of(ticket.id));
 	}
+
+
 
 	public getTickets() : Observable<ITicket[]> {
 		return (of(this.loadTickets()));
@@ -71,7 +74,6 @@ export class TicketService {
 			return (throwError(() => new Error("Not Found")));
 		}
 	}
-
 
 	private loadTickets() : ITicket[] {
 		let tickets = <ITicket[]>this.localStorageService.getItem("tickets");

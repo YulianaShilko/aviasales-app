@@ -1,0 +1,61 @@
+:host {
+    display: block;
+    margin-bottom: 77px;
+    padding-top: 70px;
+    padding-right: 70px;
+    padding-left: 70px;
+    font-size: 14px;
+}
+
+.avia-list__header {
+    display: block;
+}
+
+.avia-list-table {
+    width: 100%;
+}
+.avia-list-table__header {
+    background: darkgray;
+    font-size: 18px;
+}
+.avia-list-table__cell {
+    text-align: center;
+}
+.avia-list-table__info {
+    font-size: 19px;
+    font-weight: bold;
+}
+.form-group {
+    margin-bottom: 36px;
+    font-size: 20px;
+}
+.form-control {
+    font-size: 18px;
+}
+.labelFilter {
+    margin-top: 18px;
+    font-size: 24px;
+}
+.avia-list-table__button {
+    display: block;
+    width: 194px;
+    height: 50px;
+    margin: 0 auto;
+    color: white;
+    background-color: rgb(63, 81, 181);
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.avia-list-table__button-info {
+    display: block;
+    width: 194px;
+    height: 50px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 11px;
+    font-size: 17px;
+    font-weight: bold;
+}
+

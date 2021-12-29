@@ -21,6 +21,9 @@
     font-size: 25px;
 
 }
+.form-control {
+    font-size: 14px;
+}
 
 .form-group_below {
     margin-top: 30px;
